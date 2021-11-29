@@ -1,0 +1,191 @@
+.site-header {
+  @include df-b;
+
+  &__menus{
+    @include df-n;
+  }
+
+  &__menu-btn {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border: none;
+    color: $text-white;
+    font-size: 18px;
+  }
+
+  &__logo-link {
+    display: inline-block;
+    padding: 18px 15px 16px 15px;
+  }
+
+  &__logo {
+    height: 20px;
+    width: 90px;
+  }
+
+  &__form {
+  }
+
+  &__btns {
+    min-width: 225px;
+    @include df-n;
+    justify-content: end;
+  }
+
+  .c-btns{
+    border: none;
+    color: $text-white;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+
+    span{
+      @include df-c;
+      width: 24px;
+      height: 24px;
+      font-size: 18px;
+    }
+  }
+
+  &__btn-plus {
+  }
+
+  &__btn-grid {
+    span{
+      @include bg;
+      background-image: url("../../img/grid-dark.svg");
+    }
+  }
+
+  &__btn-bell {
+  }
+
+  &__btn-acc {
+    width: 70px;
+    height: 40px;
+    border: none;
+    @include df-c;
+
+    span{
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      @include bg;
+      background-image: url("../../img/acc.svg");
+      border-radius: 50%;
+      margin: 0 8px;
+    }
+  }
+}
+.h-form {
+  @include df-c;
+
+  &__box {
+    @include df-c;
+    width: 635px;
+    border-radius: 2px 0 0 2px;
+    box-shadow: inset 0 1px 2px;
+    height: 40px;
+    margin: 0 4px 0 44px;
+    border-radius: 0 2px 2px 0;
+  }
+
+  &__inner-box {
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    @include df-c;
+    background-color: $bg-color-inp;
+    border: 1px solid #313131;
+    padding: 2px 6px;
+  }
+
+  .inner-box--active{
+    border-color: #18467F;
+  }
+
+  &__input {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: $text-white;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance:none;
+  }
+  &__keyboard-btn,
+  &__search-btn,
+  &__microphone,
+  &__x-btn{
+    background-color: transparent;
+    border: none;
+  }
+
+  &__search-btn {
+    font-size: 18px;
+    color: $text-white;
+    height: 40px;
+    width: 70px;
+    border: 1px solid transparent;
+    border-radius: 0 2px 2px 0;
+    background-color: #313131;
+  }
+
+  &__microphone {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: $text-white;
+    padding: 8px;
+    margin-left: 4px;
+    border-radius: 50%;
+    background-color: #181818;
+    border: none;
+
+    span{
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      @include bg;
+      background-image: url("../../img/mic-dark.svg");
+    }
+  }
+
+  &__x-btn{
+    display: none;
+    color: $text-white;
+    font-size: 20px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    right: -7px;
+  }
+
+  &__keyboard-btn{
+    color: #a0a0a0;
+    padding: 0 6px;
+
+    &:hover{
+      color: $text-white;
+    }
+  }
+}
+.d-block{
+  display: inline-block;
+}
+.dbdd{
+  min-height: 200vh;
+}

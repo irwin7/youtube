@@ -4,12 +4,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lesson</title>
+  <title>YouTube by IrWiN</title>
+  <!-- youtube icon -->
+  <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/b75d77f8/img/favicon.ico" type="image/x-icon">
+  <!-- fonts -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <!-- css -->
   <link rel="stylesheet" href="css/flexboxgrid.min.css">
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-
+  <main>
+    <header id="site-header">
+      <div class="container">
+        <div class="site-header">
+          <div class="site-header__menus">
+            <button class="site-header__menu-btn" type="button"><i class="fal fa-bars"></i></button>
+            <a class="site-header__logo-link" href="index.html"><img class="site-header__logo" src="img/logo-dark.svg" alt="logo"></a>
+          </div>
+          <form class="site-header__form h-form">
+            <div class="h-form__box">
+              <div class="h-form__inner-box">
+                <input id="h-form__input" class="h-form__input" type="search" placeholder="Введите запрос">
+                <button class="h-form__keyboard-btn"><i class="fas fa-keyboard"></i></button>
+                <button class="h-form__x-btn" type="reset"><i class="fal fa-times"></i></button>
+              </div>
+              <button class="h-form__search-btn"><i class="fal fa-search"></i></button>
+            </div>
+            <button class="h-form__microphone"><span></span></button>
+          </form>
+          <div class="site-header__btns">
+            <button class="site-header__btn-plus c-btns"><span><i class="fal fa-video-plus"></i></span></button>
+            <button class="site-header__btn-grid c-btns" ><span></span></button>
+            <button class="site-header__btn-bell c-btns"><span><i class="fal fa-bell"></i></span></button>
+            <button class="site-header__btn-acc"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="dbdd"></div>
+  </main>
   <script src="js/main.js"></script>
 </body>
 </html>

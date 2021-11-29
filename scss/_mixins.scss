@@ -3,3 +3,26 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin df-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin df-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin df-n {
+  display: flex;
+  align-items: center;
+}
+
+@mixin bg {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
