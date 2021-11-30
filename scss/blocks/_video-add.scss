@@ -1,0 +1,41 @@
+.video-addd {
+  display: none;
+  width: 228px;
+  height: 96px;
+  padding: 8px 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--color-21);
+  opacity: 0.98;
+  border: 0.5px solid var(--main-border);
+  border-top: none;
+  border-right: none;
+
+  &__item {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 36px;
+    height: 40px;
+    @include df-n;
+
+    &:hover{
+      background-color: var(--color-38);
+    }
+  }
+
+  &__link {
+    color: var(--text-white);
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icn{
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 16px;
+    fill: var(--text-white);
+  }
+}

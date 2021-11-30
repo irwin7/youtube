@@ -1,0 +1,50 @@
+.apps {
+  width: 265px;
+  height: 250px;
+  position: absolute;
+  top: 42px;
+  right: 125px;
+  background-color: var(--color-21);
+  border: 0.5px solid var(--main-border);
+  border-top: none;
+  display: none;
+
+  &__group{
+    padding: 8px 0;
+
+    &:nth-child(2){
+      border-top: 1px solid var(--main-border);
+      border-bottom: 1px solid var(--main-border);
+    }
+  }
+
+  &__item {
+    height: 40px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 36px;
+    @include df-n;
+
+    &:hover{
+      background-color: var(--color-38);
+    };
+  }
+
+  &__link {
+    color: var(--text-white);
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icn {
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 16px;
+    color: var(--text-white);
+  }
+}
+.simsim{
+  display: block;
+}

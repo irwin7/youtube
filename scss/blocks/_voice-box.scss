@@ -1,0 +1,78 @@
+.voice-box {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+
+
+  &__inner {
+    width: 595px;
+    height: 400px;
+    margin-top: 8px;
+    padding: 0 0 16px 32px;
+    background-color: var(--color-21);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: end;
+    height: 48px;
+    padding-top: 16px;
+    padding-right: 16px;
+  }
+
+  &__close {
+    border: none;
+    font-size: 20px;
+    color: var(--text-white);
+
+    i{
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__title {
+    color: var(--text-white);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    color: var(--text-aaa);
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-self: end;
+    margin-top: auto;
+    height: 130px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  &__rec-btn {
+    width: 68px;
+    height: 68px;
+    background-color: #4C4C4C;
+    border-radius: 50%;
+    border: none;
+    @include bg;
+    background-size: 40px;
+    background-image: url("../../img/mic-dark.svg");
+  }
+}

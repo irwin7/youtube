@@ -13,6 +13,51 @@ html {
   margin: 0;
 }
 
+:root{
+  --color-main-red : #f00;
+  --bg-color : #202020;
+  --bg-color-inp : #121212;
+  --bg-f2 : #f2f2f2;
+  --bg-e5 : #e5e5e5;
+  --border-color : #d9d9d9;
+  --color-white : #fff;
+  --text-white : #fff;
+  --text-aaa : #aaa;
+  --color-black : #000;
+  --text-black : #000;
+  --text-color : #030303;
+  --text-5f : #5f5f5f;
+  --text-60 : #606060;
+  --color-21 : #212121;
+  --color-38 : #383838;
+  --color-31 : #313131;
+  --color-30 : #303030;
+  --grid-btn : url("../../img/grid-dark.svg");
+  --grid-fulled-btn : url("../../img/grid-dark-fulled.svg");
+  --c-btn-bg : #313131;
+  --mic-bg : #181818;
+  --main-border : #414141;
+  --notific-text : #808080;
+  --mic-icn : url("../../img/mic-dark.svg");
+  --search-bg : #313131;
+}
+
+.light{
+  --bg-color : #fff;
+  --text-white : #030303;
+  --grid-btn : url("../../img/grid.svg");
+  --grid-fulled-btn : url("../../img/grid-fulled.svg");
+  --c-btn-bg : #e5e5e5;
+  --main-border : #80808075;
+  --notific-text : #909090;
+  --color-21 : #fff;
+  --bg-color-inp : #fff;
+  --color-31 : #e5e5e5;
+  --mic-icn : url("../../img/mic.svg");
+  --mic-bg : #f9f9f9;
+  --search-bg : #f8f8f8;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -21,7 +66,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: $font-stack;
-  background-color: $bg-color;
+  background-color: var(--bg-color);
 }
 
 img {
