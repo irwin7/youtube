@@ -1,44 +1,48 @@
-let elVideoAdd = document.querySelector(".site-header__btn-plus")
-let elBellBtn = document.querySelector(".site-header__btn-bell")
-let elVoiceOpen = document.querySelector(".h-form__microphone")
-let keyWordCloseBtn = document.querySelector(".h-form__x-btn")
-let elVoiceClose = document.querySelector(".voice-box__close")
-let elSearchInp = document.getElementById("h-form__input")
-let elVideoAddOpen = document.getElementById("video-add")
-let elNotfCenter = document.getElementById("notf-center")
-let elOpenApps = document.getElementById("open-apps")
-let elGridSpan = document.getElementById("grid-span")
-let elBellIcn = document.querySelector(".bell-notf")
-let elIcnAdd = document.querySelector(".video-add")
-let elGridBtn = document.getElementById("grid-btn")
-let elVoice = document.getElementById("voice-box")
+let elAccOpenBtn = document.querySelector(".site-header__btn-acc");
+let elThemeExitBtn = document.querySelector(".theme-change__exit");
+let elVideoAdd = document.querySelector(".site-header__btn-plus");
+let elBellBtn = document.querySelector(".site-header__btn-bell");
+let elCheckItem = document.querySelector(".theme-change__item");
+let elVoiceOpen = document.querySelector(".h-form__microphone");
+let keyWordCloseBtn = document.querySelector(".h-form__x-btn");
+let elVoiceClose = document.querySelector(".voice-box__close");
+let elCheckItemLight = document.querySelector(".light-theme");
+let elSiteSettings = document.getElementById('site-settings');
+let elThemeSetting = document.getElementById("theme-change");
+let elCheckItemDark = document.querySelector(".dark-theme");
+let elSearchInp = document.getElementById("h-form__input");
+let elVideoAddOpen = document.getElementById("video-add");
+let elNotfCenter = document.getElementById("notf-center");
+let elThemeOpenBtn = document.querySelector(".theme-opt");
+let elOpenApps = document.getElementById("open-apps");
+let elGridSpan = document.getElementById("grid-span");
+let elBellIcn = document.querySelector(".bell-notf");
+let elIcnAdd = document.querySelector(".video-add");
+let elGridBtn = document.getElementById("grid-btn");
+let elVoice = document.getElementById("voice-box");
+let elCheckIcn = document.getElementById(".check");
 let form = document.querySelector('.h-form');
-let dark = document.getElementById('dark-l');
 let elLogo = document.getElementById('logo');
 
-elSearchInp.addEventListener("keyup",searchFormKeyWordClose)
-elSearchInp.addEventListener("blur",searchFormBorderRemove)
-elSearchInp.addEventListener("click",searchFormBorder)
-keyWordCloseBtn.addEventListener("click",removeX)
-elVoiceClose.addEventListener("click",voiceClose)
-elVoiceOpen.addEventListener("click",voiceOpen)
-elVideoAdd.addEventListener("blur",videoRemove)
-elVideoAdd.addEventListener("click",videoAdd)
-elGridBtn.addEventListener("click",openApps)
-elGridBtn.addEventListener("blur",closeApps)
-elBellBtn.addEventListener("click",openNotf)
-elBellBtn.addEventListener("blur",closeNotf)
-dark.addEventListener("click",darkLight)
+elSearchInp.addEventListener("keyup",searchFormKeyWordClose);
+elThemeExitBtn.addEventListener("click" , closeThemeSetting);
+elSearchInp.addEventListener("blur",searchFormBorderRemove);
+elThemeOpenBtn.addEventListener("click" , openThemeSetting);
+elCheckItemLight.addEventListener("click" , chooseLight);
+elCheckItemDark.addEventListener("click" , chooseDark);
+elSearchInp.addEventListener("click",searchFormBorder);
+elAccOpenBtn.addEventListener("click",settingsOpen);
+elAccOpenBtn.addEventListener("blur",settingsClose);
+keyWordCloseBtn.addEventListener("click",removeX);
+elVoiceClose.addEventListener("click",voiceClose);
+elVoiceOpen.addEventListener("click",voiceOpen);
+elVideoAdd.addEventListener("blur",videoRemove);
+elVideoAdd.addEventListener("click",videoAdd);
+elGridBtn.addEventListener("click",openApps);
+elGridBtn.addEventListener("blur",closeApps);
+elBellBtn.addEventListener("click",openNotf);
+elBellBtn.addEventListener("blur",closeNotf);
 
-function darkLight(){
-  document.body.classList.toggle("light")
-  if(document.body.className == "light"){
-    elLogo.src = "img/logo.svg"
-  }
-  else{
-    elLogo.src = "img/logo-dark.svg"
-  }
-}
 function removeX(){
   keyWordCloseBtn.style.display = "none"
 }
@@ -72,8 +76,18 @@ function voiceOpen(){
 function voiceClose(){
   elVoice.style.display = "none"
 }
+function videoRemove(){
+  document.body.addEventListener("click",(e)=>{
+    if(e.target.parentNode.parentNode.className == "video-addd__list" || e.target.parentNode.className == "video-addd__list" || e.target.parentNode.className == "video-addd" || e.target.parentNode.parentNode.className == "video-addd"){
+    }
+    else{
+      elIcnAdd.className = "fal fa-video-plus video-add"
+      elVideoAddOpen.style.display = "none"
+    }
+  });
+}
 function videoAdd(){
-  if(elIcnAdd.className == "fal fa-video-plus video-add"){
+  if(elVideoAddOpen.style.display == "none"){
     elIcnAdd.className = "fad fa-video-plus video-add"
     elVideoAddOpen.style.display = "block"
   }
@@ -81,10 +95,6 @@ function videoAdd(){
     elIcnAdd.className = "fal fa-video-plus video-add"
     elVideoAddOpen.style.display = "none"
   }
-}
-function videoRemove(){
-    elIcnAdd.className = "fal fa-video-plus video-add"
-    elVideoAddOpen.style.display = "none"
 }
 function openApps(){
   elOpenApps.classList.toggle("simsim")
@@ -107,4 +117,38 @@ function openNotf(){
 function closeNotf(){
   elBellIcn.className = "fal fa-bell bell-notf";
   elNotfCenter.style.display = "none";
+}
+function settingsOpen(){
+  if(elSiteSettings.style.display == "none"){
+    elSiteSettings.style.display = "block"
+  }
+  else{
+    elSiteSettings.style.display = "none"
+  }
+}
+function settingsClose(e){
+  document.body.addEventListener("click",(e)=>{
+    if(e.target.parentNode.parentNode.parentNode.className == "site-settings__hero" || e.target.parentNode.className == "site-settings__hero" || e.target.parentNode.parentNode.className == "site-settings__header" || e.target.parentNode.className == "site-settings__header"){
+    }
+    else{
+      elSiteSettings.style.display = "none"
+    }
+  })
+}
+function openThemeSetting(){
+  elSiteSettings.style.display = "none"
+  elThemeSetting.style.display = "block"
+}
+function closeThemeSetting(){
+  elThemeSetting.style.display = "none"
+}
+function chooseDark(){
+  elCheckItemLight.classList.remove("theme-changed")
+  elCheckItemDark.classList.add("theme-changed")
+  document.body.classList.remove("light")
+}
+function chooseLight(){
+  elCheckItemDark.classList.remove("theme-changed")
+  elCheckItemLight.classList.add("theme-changed")
+  document.body.classList.add("light")
 }

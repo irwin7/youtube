@@ -1,0 +1,70 @@
+.menu {
+  width: 240px;
+  height: calc(100vh - 59px);
+  background-color: yellowgreen;
+  overflow: scroll;
+
+  &__item {
+    height: 40px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-white);
+    cursor: pointer;
+    &:hover{
+      background-color: var(--color-38);
+    };
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      @include bg;
+      margin-right: 24px;
+    }
+  }
+
+  &__option {
+  }
+  .home-p::before{
+    background-image: var(--home-p);
+    --home-p: url("../../img/home.svg");
+    --home-p: url("../../img/home-dark.svg");
+  }
+  .navig-p::before{
+    // background-image: var(--);
+    background-image: url("../../img/explore-dark.svg");
+    background-image: url("../../img/explore.svg");
+  }
+  .subs-p::before{
+    // background-image: var(--);
+    background-image: url("../../img/subscription-dark.svg");
+    background-image: url("../../img/subscription.svg");
+  }
+  .library-p::before{
+    // background-image: var(--);
+    background-image: url("../../img/library-dark.svg");
+    background-image: url("../../img/library.svg");
+  }
+  .history-p::before{
+    // background-image: var(--);
+    background-image: url("../../img/history-dark.svg");
+    background-image: url("../../img/history.svg");
+  }
+  .videos-p::before{
+    // background-image: var(--);
+    background-image: url("../../img/videos-dark.svg");
+    background-image: url("../../img/videos.svg");
+  }
+  .later-p::before{
+    // background-image: var(--);
+    background-image: url("../../img/watch-later-dark.svg");
+    background-image: url("../../img/watch-later.svg");
+  }
+  .liked-p::before{
+    // background-image: var(--);
+    background-image: url("../../img/liked-dark.svg");
+    background-image: url("../../img/liked.svg");
+  }
+}
