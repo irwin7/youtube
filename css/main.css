@@ -400,7 +400,14 @@ html {
   --help-bg: url("../../img/help-dark.svg");
   --send-bg: url("../../img/send-dark.svg");
   --keyb-bg: url("../../img/keyb-dark.svg");
-  --home-p: url("../../img/home.svg");
+  --home-p: url("../../img/home-dark.svg");
+  --navig-p: url("../../img/explore-dark.svg");
+  --subs-p: url("../../img/subscription-dark.svg");
+  --library-p: url("../../img/library-dark.svg");
+  --history-p: url("../../img/history-dark.svg");
+  --videos-p: url("../../img/videos-dark.svg");
+  --later-p: url("../../img/watch-later-dark.svg");
+  --liked-p: url("../../img/liked-dark.svg");
 }
 
 .light {
@@ -431,6 +438,14 @@ html {
   --help-bg: url("../../img/help.svg");
   --send-bg: url("../../img/send.svg");
   --keyb-bg: url("../../img/keyb.svg");
+  --home-p: url("../../img/home.svg");
+  --navig-p: url("../../img/explore.svg");
+  --subs-p: url("../../img/subscription.svg");
+  --library-p: url("../../img/library.svg");
+  --history-p: url("../../img/history.svg");
+  --videos-p: url("../../img/videos.svg");
+  --later-p: url("../../img/watch-later.svg");
+  --liked-p: url("../../img/liked.svg");
 }
 
 body {
@@ -1355,8 +1370,8 @@ button {
 .menu {
   width: 240px;
   height: calc(100vh - 59px);
-  background-color: yellowgreen;
-  overflow: scroll;
+  background-color: var(--color-21);
+  overflow: auto;
 }
 
 .menu__item {
@@ -1390,42 +1405,33 @@ button {
 
 .menu .home-p::before {
   background-image: var(--home-p);
-  --home-p: url("../../img/home.svg");
-  --home-p: url("../../img/home-dark.svg");
 }
 
 .menu .navig-p::before {
-  background-image: url("../../img/explore-dark.svg");
-  background-image: url("../../img/explore.svg");
+  background-image: var(--navig-p);
 }
 
 .menu .subs-p::before {
-  background-image: url("../../img/subscription-dark.svg");
-  background-image: url("../../img/subscription.svg");
+  background-image: var(--subs-p);
 }
 
 .menu .library-p::before {
-  background-image: url("../../img/library-dark.svg");
-  background-image: url("../../img/library.svg");
+  background-image: var(--library-p);
 }
 
 .menu .history-p::before {
-  background-image: url("../../img/history-dark.svg");
-  background-image: url("../../img/history.svg");
+  background-image: var(--history-p);
 }
 
 .menu .videos-p::before {
-  background-image: url("../../img/videos-dark.svg");
-  background-image: url("../../img/videos.svg");
+  background-image: var(--videos-p);
 }
 
 .menu .later-p::before {
-  background-image: url("../../img/watch-later-dark.svg");
-  background-image: url("../../img/watch-later.svg");
+  background-image: var(--later-p);
 }
 
 .menu .liked-p::before {
-  background-image: url("../../img/liked-dark.svg");
-  background-image: url("../../img/liked.svg");
+  background-image: var(--liked-p);
 }
 /*# sourceMappingURL=main.css.map */

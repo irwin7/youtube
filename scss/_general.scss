@@ -53,7 +53,14 @@ html {
   --help-bg: url("../../img/help-dark.svg");
   --send-bg: url("../../img/send-dark.svg");
   --keyb-bg: url("../../img/keyb-dark.svg");
-  --home-p: url("../../img/home.svg");
+  --home-p: url("../../img/home-dark.svg");
+  --navig-p: url("../../img/explore-dark.svg");
+  --subs-p: url("../../img/subscription-dark.svg");
+  --library-p: url("../../img/library-dark.svg");
+  --history-p: url("../../img/history-dark.svg");
+  --videos-p: url("../../img/videos-dark.svg");
+  --later-p: url("../../img/watch-later-dark.svg");
+  --liked-p: url("../../img/liked-dark.svg");
 }
 
 .light{
@@ -84,6 +91,14 @@ html {
   --help-bg: url("../../img/help.svg");
   --send-bg: url("../../img/send.svg");
   --keyb-bg: url("../../img/keyb.svg");
+  --home-p: url("../../img/home.svg");
+  --navig-p: url("../../img/explore.svg");
+  --subs-p: url("../../img/subscription.svg");
+  --library-p: url("../../img/library.svg");
+  --history-p: url("../../img/history.svg");
+  --videos-p: url("../../img/videos.svg");
+  --later-p: url("../../img/watch-later.svg");
+  --liked-p: url("../../img/liked.svg");
 }
 
 body {
